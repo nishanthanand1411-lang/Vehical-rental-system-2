@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Vehicle</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #2563eb;
+            outline: none;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        button,
+        .back-btn {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .back-btn {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        .back-btn:hover {
+            background: #d1d5db;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚗 Add New Vehicle</h1>
+
+    <form method="POST">
+
+        <div class="form-group">
+            <label>Vehicle Name</label>
+            <input type="text" name="name"
+                   placeholder="Example: Toyota"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Model</label>
+            <input type="text" name="model"
+                   placeholder="Example: Innova Crysta"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Vehicle Type</label>
+
+            <select name="vehicle_type" required>
+                <option value="">Select Type</option>
+                <option value="Car">Car</option>
+                <option value="SUV">SUV</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="Bike">Bike</option>
+                <option value="Van">Van</option>
+                <option value="Bus">Bus</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Registration Number</label>
+            <input type="text"
+                   name="registration_no"
+                   placeholder="Example: KL-07-AB-1234"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Manufacturing Year</label>
+            <input type="number"
+                   name="year"
+                   min="1900"
+                   max="2100"
+                   placeholder="Example: 2024"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Next Service Date</label>
+            <input type="date"
+                   name="service_date"
+                   required>
+        </div>
+
+        <div class="form-group">
+            <label>Insurance Expiry Date</label>
+            <input type="date"
+                   name="insurance_date"
+                   required>
+        </div>
+
+        <div class="buttons">
+
+            <a href="/" class="back-btn">
+                ← Back
+            </a>
+
+            <button type="submit">
+                Add Vehicle
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>
